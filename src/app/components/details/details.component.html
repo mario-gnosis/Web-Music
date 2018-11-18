@@ -1,22 +1,19 @@
 <div class="container">
-    <p>
-    <li>
-      <div *ngFor="let item of data.songs" class="card mb-2">
+  <p>
+  <div class="card mb-2">
+      <img class="card-img-top" src="https://i.pinimg.com/originals/33/ff/dd/33ffddb1f33aab1f0675f5035111c8b3.jpg" alt="Card image cap">
 
-        <img class="card-img-top"  src={{item.imgUrl}} alt="Card image cap">
+      <div class="card-body">
 
-        <div class="card-body" *ngFor="let item of songs">
+        <h5 class="card-title">Banda</h5>
+        <p class="card-text">Nom da música</p>
 
-          <h5 class="card-title">{{item.artista}}</h5>
-          <p class="card-text">{{item.title}}</p>
-
-          <div class="btn-group " role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary align-middle" (click)="onclick()"><i class="material-icons">favorite</i></button>
-            <button type="button" class="btn btn-secondary align-middle "><i class="material-icons">music_note</i></button>
-            <button type="button" class="btn btn-secondary align-middle "><i class="material-icons">share</i></button>
-            <button type="button" class="btn btn-secondary align-middle "><i class="material-icons">delete</i></button>
-          </div>
+        <div class="btn-group " role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary align-middle" (click)="onclick()"><i class="material-icons">favorite</i></button>
+          <button type="button" class="btn btn-secondary align-middle "><i class="material-icons">music_note</i></button>
+          <button type="button" class="btn btn-secondary align-middle "><i class="material-icons">share</i></button>
+          <button type="button" class="btn btn-secondary align-middle "><i class="material-icons">delete</i></button>
         </div>
-      </div>
-    </li>
+    </div>
+
 </div>

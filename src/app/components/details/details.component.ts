@@ -3,10 +3,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { SharedService } from '../../services/shared.service';
 import { ResponseApi } from '../../model/response-api';
 import { SongsService } from '../../services/songs/songs.service';
-// import { Songs } from '../../model/song.model';
-// import { forEach } from '@angular/router/src/utils/collection';
-import { Songs } from './../../model/song.model';
-import { formArrayNameProvider } from '@angular/forms/src/directives/reactive_directives/form_group_name';
 
 @Component({
   selector: 'app-details',
@@ -18,8 +14,9 @@ export class DetailsComponent implements OnInit {
   shared: SharedService;
   message: {};
 
-  // songs = new Songs('', 'Joais', 'oasis', 'teste', 'asdasd', 'dasd');
-  songs = new Songs('', '', '', '', '', '');
+  songs: object;
+
+  // songs = new Songs('', '', '', '', '', '');
 
   classCss: { 'alert': boolean; };
 
@@ -27,7 +24,7 @@ export class DetailsComponent implements OnInit {
               private route: ActivatedRoute,
               private _SongsService: SongsService) {
     this.shared = SharedService.getInstance();
-   }
+  }
 
   ngOnInit() {
     const id: string = this.route.snapshot.params['id'];
@@ -42,8 +39,9 @@ export class DetailsComponent implements OnInit {
     alert('Teste');
   }
 
-  list(id: string) {
+  list1(id: string) {
     console.log('id --> ', id);
+
     this._SongsService.findById(id).subscribe((responseApi: ResponseApi) => {
       console.log('responseApi -->  ', responseApi);
       this.songs = responseApi.data;
@@ -52,6 +50,12 @@ export class DetailsComponent implements OnInit {
         type: 'error',
         text: err['error']['errors'][0]
       });
+    });
+  }
+
+  list(id: string) {
+    this._SongsService.findById(id).subscribe((res) => {
+      this.songs = res;
     });
   }
 
