@@ -1,0 +1,69 @@
+
+<!-- Script da tela de Registro, consegui onde adicionar ele pra funcionar-->
+
+<script>
+$(document).ready(function(){
+
+	$('ul.switcher li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('li').removeClass('active');
+    $('div.tab-pane').removeClass('active');
+
+		$(this).addClass('active');
+		$("#"+tab_id).addClass('active');
+	})
+
+})
+  </script>
+
+<body class="login">
+	<div class="container">
+		<div class="login-container-wrapper clearfix">
+			<ul class="switcher clearfix">
+				<li class="first logo active" data-tab="login">
+						<a>Login</a>
+				</li>
+				<li class="second logo" data-tab="sign_up">
+						<a>Registar-se</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="login">
+					<form class="form-horizontal login-form">
+						<div class="form-group relative">
+							<input class="form-control input-lg" id="email" placeholder="E-mail"required="" type="email"> <i class="material-icons">alternate_email </i>
+						</div>
+						<div class="form-group relative">
+							<input class="form-control input-lg " id="password" placeholder="Senha" required="" type="password"> <i class="material-icons">lock</i>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-success btn-lg btn-block" type="submit" >Login</button>
+						</div>
+            <hr />
+				 </form>
+				</div>
+				<div class="tab-pane" id="sign_up">
+					<form class="form-horizontal login-form">
+						<div class="form-group relative">
+							<input class="form-control input-lg" id="login_username" placeholder="E-mail" required="" type="email"> <i class="fa fa-user"></i>
+						</div>
+						<div class="form-group relative">
+							<input class="form-control input-lg" id="login_password" placeholder="Senha" required="" type="password"> <i class="fa fa-lock"></i>
+						</div>
+						<div class="form-group relative">
+							<input class="form-control input-lg" id="login_password2" placeholder="Confirmar senha" required="" type="password"> <i class="fa fa-lock"></i>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-success btn-lg btn-block" type="submit">Salvar</button>
+						</div>
+									<hr>
+						<div class="text-center">
+							<label><a href="#">Já é membro?</a></label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

@@ -1,0 +1,12 @@
+<div class="container" style="list-style-type: none;">
+    <br>
+    <li *ngFor="let item of songs" (click)="detail(item.id)">
+      <a  class="itemlist-group-item-action">
+          <div class="item row">
+              <div class="col-4"><img src={{item.imgUrl}} class="rounded-circle" style="width: 90%;" /></div>
+              <div class="col-8">Artista: {{ item.artist}} <p> Titulo: {{ item.title}} - {{ item.year}}</div>
+          </div>
+      </a>
+      <hr>
+    </li>  
+</div>
