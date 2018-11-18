@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { SharedService } from '../../services/shared.service';
 import { ResponseApi } from '../../model/response-api';
 import { SongsService } from '../../services/songs/songs.service';
+import { Songs } from '../../model/song.model';
 
 @Component({
   selector: 'app-details',
@@ -14,7 +15,12 @@ export class DetailsComponent implements OnInit {
   shared: SharedService;
   message: {};
 
-  songs: object;
+  // songs: object;
+  // songs: Array<Songs> = [];
+
+  // songs: any;
+
+  private songs: Object = Songs;
 
   // songs = new Songs('', '', '', '', '', '');
 
@@ -39,12 +45,12 @@ export class DetailsComponent implements OnInit {
     alert('Teste');
   }
 
-  list1(id: string) {
+  list(id: string) {
     console.log('id --> ', id);
 
     this._SongsService.findById(id).subscribe((responseApi: ResponseApi) => {
       console.log('responseApi -->  ', responseApi);
-      this.songs = responseApi.data;
+      this.songs = responseApi;
   } , err => {
       this.showMessage({
         type: 'error',
@@ -53,9 +59,23 @@ export class DetailsComponent implements OnInit {
     });
   }
 
-  list(id: string) {
+  list1(id: string) {
+    // let _artist: any;
+
     this._SongsService.findById(id).subscribe((res) => {
+      // console.log('Res ----> ', res);
+
+      /*
+      Object.keys(res).forEach(key => {
+        const value = res[key];
+
+        _artist = value;
+        console.log('Res For ---> ', value);
+      });
+      */
       this.songs = res;
+
+      // console.log('Songs ---> ', this.songs);
     });
   }
 

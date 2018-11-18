@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../../../services/shared.service';
 import { Router } from '@angular/router';
-import { UserService } from '../../../services/user/user.service';
 
 // Import the model
 import { User } from './../../../model/user.model';
 import { CurrentUser } from './../../../model/currentUser';
+import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   shared: SharedService;
   message: string;
 
-  constructor(private userService: UserService,
+  constructor(private authService: AuthService,
               private router: Router) {
     this.shared = SharedService.getInstance();
   }
@@ -27,13 +27,16 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    // console.log('login  --->');
+
     this.message = '';
-    this.userService.login(this.user).subscribe((userAuthentication: CurrentUser) => {
+    this.authService.login(this.user).subscribe((userAuthentication: CurrentUser) => {
+        console.log(userAuthentication);
+
         this.shared.token = userAuthentication.token;
         this.shared.user = userAuthentication.user;
-        this.shared.user.profile = this.shared.user.profile.substring(5);
         this.shared.showTemplate.emit(true);
-        this.router.navigate(['/']);
+        this.router.navigate(['/music']);
     } , err => {
       this.shared.token = null;
       this.shared.user = null;
