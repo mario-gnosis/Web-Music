@@ -18,7 +18,7 @@ export class DetailsComponent implements OnInit {
   shared: SharedService;
   message: {};
 
-  // songs = new Songs('', 'JOaiis', 'oasis', 'teste', 'asdasd', 'dasd');
+  // songs = new Songs('', 'Joais', 'oasis', 'teste', 'asdasd', 'dasd');
   songs = new Songs('', '', '', '', '', '');
 
   classCss: { 'alert': boolean; };

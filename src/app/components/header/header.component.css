@@ -1,7 +1,10 @@
 .header{
-    box-shadow: 2px 2px 7px 1px #CFBC9B;
+  box-shadow: 2px 2px 7px 1px #CFBC9B;
 }
-
 .textC{
-  text-align: center !important;
+margin-left: 38%;
+
+}
+.saida{
+margin-left: 43%;
 }

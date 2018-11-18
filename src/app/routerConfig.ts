@@ -5,7 +5,6 @@ import { HeaderComponent } from '../app/components/header/header.component';
 import { FavoritesComponent } from '../app/components/favorites/favorites.component';
 import { MusicListComponent } from '../app/components/music-list/music-list.component';
 import { DetailsComponent } from '../app/components/details/details.component';
-import { NewMusicComponent } from '../app/components/new-music/new-music.component';
 import { AuthGuard } from './components/security/auth.guard';
 
 const routes: Routes = [
@@ -14,8 +13,7 @@ const routes: Routes = [
     { path: 'favorites', component: FavoritesComponent },
     { path: 'music', component: MusicListComponent,  },
     { path: 'details', component: DetailsComponent },
-    { path: 'details/:id', component: DetailsComponent },
-    { path: 'newMusic', component: NewMusicComponent },
+    { path: 'details/:id', component: DetailsComponent },   
     { path: '', redirectTo: '/music', pathMatch: 'full' },
 ];
 
@@ -32,4 +30,4 @@ export const appRouterComponents = [
   FavoritesComponent,
   MusicListComponent,
   DetailsComponent,
-  NewMusicComponent ];
+ ];
