@@ -1,25 +1,26 @@
 <nav class="navbar header navbar-expand-lg navbar-light alert-success sticky-top" >
-  <a class="navbar-brand" href="#">{{title}}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand "><img src="../assets/img/logo.png.ico" width="70" height="70" alt="">{{title}}</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="navbarNavDropdown"
+  aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav justify-content-center">
-      <li class="nav-item active">
+
+    <ul class="navbar-nav textC content-center">
+          <li class="active">
        <a class="nav-link active" data-placement="bottom" href="#" routerLink="music" routerLinkActive="active">Músicas</a>
       </li>
       <li class="nav-item">
          <a class="nav-link active" href="#" routerLink="favorites" routerLinkActive="active" >Favoritas</a>
       </li>
-      <li class="nav-item">
-            <a class="nav-link active align-middle" href="#" routerLink="newMusic" routerLinkActive="active">
-              <i class="material-icons">playlist_add</i>
-            </a>
-          </li>
+
     </ul>
-     <button type="button" class="close justify-content-end" aria-label="Close" routerLink="login" routerLinkActive="active" >
+        <button type="button" class="navbar close saida" id="navbarNavDropdown" aria-label="Close" routerLink="login" routerLinkActive="active" >
         <span aria-hidden="true"></span>
         <i class="material-icons">exit_to_app</i>
-      </button>
+    </button>
   </div>
+
 </nav>
