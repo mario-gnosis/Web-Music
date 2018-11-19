@@ -30,7 +30,7 @@ $(document).ready(function(){
 			</ul>
 			<div class="tab-content">
 				<div class="tab-pane active" id="login">
-					<form class="form-horizontal login-form">
+					<form class="form-horizontal login-form" #form="ngForm" (ngSubmit)="login()" novalidate>
 						<div class="form-group relative">
 							<input class="form-control input-lg" id="email" placeholder="E-mail"required="" type="email"> <i class="material-icons">alternate_email </i>
 						</div>

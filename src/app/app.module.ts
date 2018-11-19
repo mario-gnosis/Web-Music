@@ -2,7 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-// import { AuthService } from './user/auth.service';
+
 import { AppRoutes, appRouterComponents } from './routerConfig';
 
 // Access to Api
@@ -10,6 +10,8 @@ import { UserService } from './services/user/user.service';
 import { SongsService } from './services/songs/songs.service';
 import { ProfileService } from './services/profile/profile.service';
 import { FavoritesService } from './services/favorites/favorites.service';
+import { AuthService } from './services/auth/auth.service';
+
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -26,7 +28,8 @@ import { FormsModule } from '@angular/forms';
   providers: [UserService,
               SongsService,
               ProfileService,
-              FavoritesService],
+              FavoritesService,
+              AuthService],
   bootstrap: [AppComponent]
 })
 
