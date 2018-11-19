@@ -24,7 +24,7 @@ export class MusicListComponent implements OnInit {
   }
 
   detail(id: string) {
-    console.log(id);
+    // console.log(id);
 
     this.router.navigate(['/details', id]);
   }
