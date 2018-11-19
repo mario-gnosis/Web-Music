@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
-import { NewMusicComponent } from '../app/components/new-music/new-music.component';
 import { AppRoutes, appRouterComponents } from './routerConfig';
 
 // Access to Api
@@ -18,8 +17,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    appRouterComponents,
-    NewMusicComponent
+    appRouterComponents
   ],
   imports: [
     BrowserModule,

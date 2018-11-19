@@ -42,8 +42,7 @@ export class DetailsComponent implements OnInit {
 
   onclick() {
     this.router.navigate(['/favorites']);
-    alert('Teste');
-  }
+     }
 
   list(id: string) {
     console.log('id --> ', id);
