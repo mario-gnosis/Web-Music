@@ -22,8 +22,6 @@ export class DetailsComponent implements OnInit {
 
   private songs: Object = Songs;
 
-  // songs = new Songs('', '', '', '', '', '');
-
   classCss: { 'alert': boolean; };
 
   constructor(private router: Router,
@@ -45,36 +43,16 @@ export class DetailsComponent implements OnInit {
      }
 
   list(id: string) {
-    console.log('id --> ', id);
+    // console.log('id --> ', id);
 
     this._SongsService.findById(id).subscribe((responseApi: ResponseApi) => {
-      console.log('responseApi -->  ', responseApi);
+      // console.log('responseApi -->  ', responseApi);
       this.songs = responseApi;
   } , err => {
       this.showMessage({
         type: 'error',
         text: err['error']['errors'][0]
       });
-    });
-  }
-
-  list1(id: string) {
-    // let _artist: any;
-
-    this._SongsService.findById(id).subscribe((res) => {
-      // console.log('Res ----> ', res);
-
-      /*
-      Object.keys(res).forEach(key => {
-        const value = res[key];
-
-        _artist = value;
-        console.log('Res For ---> ', value);
-      });
-      */
-      this.songs = res;
-
-      // console.log('Songs ---> ', this.songs);
     });
   }
 
