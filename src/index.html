@@ -8,8 +8,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+
+ <script type="text/javascript">
+
+  $(document).ready(function(){
+
+    $('ul.switcher li').click(function(){
+      var tab_id = $(this).attr('data-tab');
+
+      $('li').removeClass('active');
+      $('div.tab-pane').removeClass('active');
+
+      $(this).addClass('active');
+      $("#"+tab_id).addClass('active');
+    })
+  })
+
+    </script>
 </head>
 <body>
   <app-root></app-root>

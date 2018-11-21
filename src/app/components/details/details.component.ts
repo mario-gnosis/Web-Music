@@ -17,7 +17,6 @@ export class DetailsComponent implements OnInit {
 
   // songs: object;
   // songs: Array<Songs> = [];
-
   // songs: any;
 
   private songs: Object = Songs;
@@ -40,7 +39,12 @@ export class DetailsComponent implements OnInit {
 
   onclick() {
     this.router.navigate(['/favorites']);
-     }
+  }
+
+  onRemove() {
+    console.log('Deletando');
+    alert('Música removida!');
+  }
 
   list(id: string) {
     // console.log('id --> ', id);

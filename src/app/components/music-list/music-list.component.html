@@ -1,7 +1,10 @@
+<div class="container">
 
 <ul class="list-group">
   <li class="list-group-item d-flex align-items-center" *ngFor="let item of songs" (click)="detail(item.id)">
+      <a href="#listmusic"></a>
           <img src={{item.imgUrl}} class="rounded-circle space listSpace" />
-      <div >Artista: {{ item.artist}} <p> Titulo: {{ item.title}} - {{ item.year}}</div>
+      <div ><strong>Artista:</strong> {{ item.artist}} <p><strong>Titulo: </strong> {{ item.title}} </div>
   </li>
 </ul>
+</div>

@@ -1,17 +1,13 @@
-<div class="container" style="list-style-type: none;">
-    <br>
-    <li>
-      <div class="card">
-        <img class="card-img-top" src={{songs.imgUrl}} alt={{songs.artist}} >
-        <div class="card-body">
-          <h5 class="card-title">{{songs.artist}}</h5>
-          <p class="card-text">{{songs.title}} - {{songs.year}}</p>
-          <div class="btn-group float-right">
-              <button type="button" class="btn btn-link" (click)="onclick()"><i class="material-icons">favorite</i></button>
-              <button type="button" class="btn btn-link"><i class="material-icons">delete</i></button>
-            </div>
-        </div>
+<div class="container spaceHeight">
+
+<ul class="list-group">
+    <li class="list-group-item d-flex align-items-center">
+      <img src={{songs.imgUrl}} class="space listSpace rounded-circle" />
+      <div><strong>Artista:</strong> {{ songs.artist}} <p> <strong>Titulo:</strong> {{ songs.title}} - <strong>Ano: </strong> {{ songs.year}} <p></p>
+          <button type="button" class="btn btn-link" (click)="onclick()"><i class="material-icons">favorite</i></button>
+          <button type="button" class="btn btn-link" (click)="onRemove()"><i class="material-icons">delete</i></button>
       </div>
     </li>
-  </div>
+  </ul>
 
+</div>
