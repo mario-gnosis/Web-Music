@@ -17,7 +17,6 @@ body {
 label {
   margin-bottom: 0;
 }
-
 a {
   color: #e1e1e1;
 }
@@ -31,11 +30,6 @@ a:hover {
 .radio-inline+.radio-inline {
   margin-top: 6px;
 }
-
-body.login {
-  background: rgba(255, 255, 255, 1);
-}
-
 .relative {
   position: relative;
 }
@@ -186,4 +180,6 @@ input[type="checkbox"]:checked + label::before,
   color: #FFF;
   outline:none;
 }
-
+.fundo{
+  background-color: transparent;
+}

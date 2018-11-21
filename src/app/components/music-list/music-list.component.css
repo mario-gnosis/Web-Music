@@ -6,7 +6,6 @@
 .listSpace{
   padding-left: 15px! important;
 }
-
-.bordas{
-  border: none;
+.fundo{
+  background-color: transparent;
 }

@@ -1,12 +1,19 @@
-.space {
-  margin-right: 16px;
-  width: 90%;
-  max-width: 90px;
-}
 
-.roun{
-  width: 114px! important;
+.centralizado {
+  margin: 0 auto !important;
+  float: none;
+  width: 350px;
 }
-.spaceHeight{
-  padding-top: 3%;
+.imgA{
+  border-radius: 6px;
+  width:100%;
+}
+.container{
+  background-repeat: no-repeat;
+  position: sticky;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
 }

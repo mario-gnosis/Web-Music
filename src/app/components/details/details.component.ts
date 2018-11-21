@@ -17,9 +17,10 @@ export class DetailsComponent implements OnInit {
 
   // songs: object;
   // songs: Array<Songs> = [];
+
   // songs: any;
 
-  private songs: Object = Songs;
+  public songs: Object = Songs;
 
   classCss: { 'alert': boolean; };
 

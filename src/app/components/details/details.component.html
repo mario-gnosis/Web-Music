@@ -1,13 +1,20 @@
-<div class="container spaceHeight">
+<div class="container "  id="scroll">
+<br>
 
-<ul class="list-group">
-    <li class="list-group-item d-flex align-items-center">
-      <img src={{songs.imgUrl}} class="space listSpace rounded-circle" />
-      <div><strong>Artista:</strong> {{ songs.artist}} <p> <strong>Titulo:</strong> {{ songs.title}} - <strong>Ano: </strong> {{ songs.year}} <p></p>
-          <button type="button" class="btn btn-link" (click)="onclick()"><i class="material-icons">favorite</i></button>
-          <button type="button" class="btn btn-link" (click)="onRemove()"><i class="material-icons">delete</i></button>
-      </div>
-    </li>
-  </ul>
+<div class="row rowView">
+  <div class="centralizado">
+      <h4>Details Music</h4>
+    <div class="thumbnail" name="listmusic">
+          <img src={{songs.imgUrl}}  class="imgA">
+        <div class="">
+            <button type="button" class="btn btn-link float-right" (click)="onclick()"><i class="material-icons">favorite</i></button>
+            <button type="button" class="btn btn-link float-right" (click)="onRemove()"><i class="material-icons">delete</i></button>
+          <h4 class="card-title">Artista: {{ songs.artist}}</h4>
+         <p class="card-text"> Titulo: {{ songs.title}} - Ano: {{ songs.year}} </p>
+
+        </div>
+       </div>
+  </div>
+<br>
 
 </div>

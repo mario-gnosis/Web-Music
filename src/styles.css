@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+body{
+  background-image: url(http://ead.triadps.com/imagens/login/img_fundo_login.png);
+  background-repeat: no-repeat;
+  position: sticky;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body div{
+  overflow: hidden;
+}
