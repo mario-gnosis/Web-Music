@@ -20,8 +20,8 @@ export class DetailsComponent implements OnInit {
 
   // songs: any;
 
-  public songs: Object = Songs;
 
+  public songs: any = Songs;
   classCss: { 'alert': boolean; };
 
   constructor(private router: Router,
